@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title if title else "Automation Tools" }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- 🔹 TOP HEADER -->
+<div class="top-header">
+    <span>📧 support@automationtools.com</span>
+    <span>⚡ Free Automation Tools</span>
+</div>
+
+<!-- 🔹 LOGO + ADS -->
+<div class="mid-header">
+    <div class="logo">
+        ⚙ Automation Tools
+    </div>
+
+    <div class="ads-box">
+        <!-- Future Google Adsense -->
+        <small>Advertisement Area</small>
+    </div>
+</div>
+
+<!-- 🔹 MAIN MENU -->
+<div class="main-menu">
+    <a href="/">Home</a>
+    <a href="/gmail">Amazon GV Extract</a>
+    <a href="#">Voucher Tools</a>
+    <a href="#">Blog</a>
+    <a href="#">Contact Us</a>
+</div>
+
+<!-- PAGE CONTENT -->
+<div class="main-content">
+    {% block content %}{% endblock %}
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <div class="footer-grid">
+        <div>
+            <h4>About</h4>
+            <p>Free automation tools for daily work.</p>
+        </div>
+
+        <div>
+            <h4>Tools</h4>
+            <ul>
+                <li><a href="/gmail">Amazon Voucher Extract</a></li>
+                <li><a href="#">Voucher Check</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Contact : 9288335500 </h4>
+            <p>Email: support@automationtools.com</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Automation Tools | All Rights Reserved
+    </div>
+</div>
+
+</body>
+</html>

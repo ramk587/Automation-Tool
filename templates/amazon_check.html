@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amazon Gift Card Checker</title>
+    <style>
+        body { font-family: Arial; background:#f5f7fb; padding:30px; }
+        .box { background:white; padding:25px; width:500px; border-radius:10px; }
+        input { width:100%; padding:10px; margin-top:10px; }
+        button { padding:10px 15px; margin-top:15px; background:#ff9900; border:none; color:white; }
+    </style>
+</head>
+<body>
+
+<h2>🎁 Amazon Gift Card Balance Check</h2>
+
+<div class="box">
+    <form method="POST">
+        <label>Enter Gift Card Code</label>
+        <input type="text" name="gift_code" placeholder="XXXX-XXXX-XXXX" required>
+
+        <button type="submit">Check Balance</button>
+    </form>
+
+    {% if gift_code %}
+        <hr>
+        <p><b>Your Code:</b> {{ gift_code }}</p>
+
+        <a href="https://amazonbal.qwikcilver.com/Welcome.aspx?OrgName=QwikCilver-Amazon"
+           target="_blank">
+           👉 Click Here to Check Balance on Amazon
+        </a>
+
+        <p style="color:gray;margin-top:10px;">
+            Paste the code on Amazon page to see balance.
+        </p>
+    {% endif %}
+</div>
+
+</body>
+</html>

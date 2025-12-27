@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+    <div class="tool-card">
+        <h2>🎁 Amazon Voucher Checker</h2>
+        <p>Upload file and get instant result.</p>
+
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" required><br><br>
+            <button class="btn">Check Voucher</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

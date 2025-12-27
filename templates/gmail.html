@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="tool-card">
+
+        <h2>📧 Gmail Voucher Extractor</h2>
+
+        <form method="POST">
+            <textarea name="gmail_data" rows="8" style="width:100%" placeholder="Paste Gmail content here..." required></textarea>
+            <br><br>
+            <button class="btn">Extract</button>
+        </form>
+
+        {% if file_ready %}
+
+<h3 style="color:green;">
+    ✅ Total Vouchers Extracted: {{ total_vouchers }}
+</h3>
+
+
+        <table border="1" width="100%" cellpadding="8">
+            <tr>
+                <th>Amount</th>
+                <th>Expiry Date</th>
+                <th>Gift Card Code</th>
+                <th>Reference ID</th>
+            </tr>
+
+            {% for row in table_data %}
+            <tr>
+                <td>{{ row.Amount }}</td>
+                <td>{{ row.Expiry }}</td>
+                <td>{{ row.Code }}</td>
+                <td>{{ row.Ref }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <br>
+
+        <a href="/download?file={{ file_path }}">
+            <button class="btn">⬇ Download Excel</button>
+        </a>
+
+        {% endif %}
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f3f6fb;
+}
+
+/* Top Header */
+.top-header {
+    background: #111827;
+    color: white;
+    padding: 6px 20px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Mid Header */
+.mid-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.ads-box {
+    background: #f1f1f1;
+    padding: 15px 40px;
+    border-radius: 5px;
+    color: gray;
+}
+
+/* Menu */
+.main-menu {
+    background: linear-gradient(90deg, #4f46e5, #2563eb);
+    padding: 12px 30px;
+}
+
+.main-menu a {
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, #4f46e5, #2563eb);
+    color: white;
+    padding: 60px;
+    text-align: center;
+}
+
+/* Content */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.tool-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.btn {
+    background: linear-gradient(90deg, #4f46e5, #2563eb);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background: #111827;
+    color: #ccc;
+    padding: 40px 20px;
+    margin-top: 60px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.footer a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+}

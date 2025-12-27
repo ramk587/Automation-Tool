@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amazon Gift Card Checker</title>
+    <style>
+        body { font-family: Arial; background:#f5f7fb; padding:20px; }
+        .box { background:white; padding:20px; border-radius:10px; width:600px; }
+        input, textarea { width:100%; padding:10px; margin-top:10px; }
+        button { margin-top:15px; padding:10px 15px; background:#ff9900; border:none; color:white; }
+    </style>
+</head>
+<body>
+
+<h2>Amazon Gift Card Bulk Checker</h2>
+
+<div class="box">
+    <form method="POST">
+        <label>Gift Card Code</label>
+        <input type="text" name="code" required>
+
+        <label>Reference ID</label>
+        <input type="text" name="ref">
+
+        <button type="submit">Open Amazon</button>
+    </form>
+
+    {% if code %}
+        <hr>
+        <p><b>Gift Code:</b> {{ code }}</p>
+
+        <a href="https://amazonbal.qwikcilver.com/Welcome.aspx?OrgName=QwikCilver-Amazon"
+           target="_blank">
+            👉 Open Amazon Balance Page
+        </a>
+
+        <p style="color:gray;margin-top:10px;">
+            👉 Paste code manually → Solve captcha → Check balance
+        </p>
+
+        <form method="POST" action="/save-result">
+            <input type="hidden" name="code" value="{{ code }}">
+            <input type="hidden" name="ref" value="{{ ref }}">
+
+            <label>Result (Available / Used / Invalid)</label>
+            <input type="text" name="result" required>
+
+            <button>Save Result</button>
+        </form>
+    {% endif %}
+</div>
+
+</body>
+</html>
